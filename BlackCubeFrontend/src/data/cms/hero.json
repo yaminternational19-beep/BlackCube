@@ -1,0 +1,29 @@
+{
+  "slides": [
+    {
+      "titleLine1": "SOFTWARE IT",
+      "titleLine2": "OUTSOURCING",
+      "subtitle": "We are 100+ professional software engineers with more than 10 years of experience in delivering superior products.",
+      "ctaPrimary": "Learn More",
+      "ctaSecondary": "All Services",
+      "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1400&q=80"
+    },
+    {
+      "titleLine1": "We Deliver Solution",
+      "titleLine2": "with Trusting Relationships",
+      "subtitle": "Our experienced team stands out with clear and effective processes, on-time delivery and a strong partnership mindset.",
+      "ctaPrimary": "Contact Us",
+      "ctaSecondary": "View Projects",
+      "image": "https://images.unsplash.com/photo-1529336953121-ad5a0d43d0d2?auto=format&fit=crop&w=1400&q=80"
+    },
+    {
+      "titleLine1": "DEVELOPMENT",
+      "titleLine2": "EXPERTS",
+      "subtitle": "From web to mobile and cloud – we build scalable, modern solutions tailored to your business goals.",
+      "ctaPrimary": "Get a Quote",
+      "ctaSecondary": "Our Company",
+      "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1400&q=80"
+    }
+  ]
+}
+

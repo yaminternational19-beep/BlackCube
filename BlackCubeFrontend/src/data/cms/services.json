@@ -1,0 +1,23 @@
+{
+  "services": [
+    {
+      "id": "development",
+      "title": "Software Development",
+      "description": "Custom web and mobile applications built with modern technologies and best practices.",
+      "icon": "Code"
+    },
+    {
+      "id": "design",
+      "title": "Web Design",
+      "description": "Beautiful, responsive designs that engage users and drive conversions.",
+      "icon": "Palette"
+    },
+    {
+      "id": "cloud",
+      "title": "Cloud Integration",
+      "description": "Seamless cloud migration and integration services for scalable solutions.",
+      "icon": "Cloud"
+    }
+  ]
+}
+
