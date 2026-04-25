@@ -1,5 +1,5 @@
 'use client';
-import { createContext, useContext, useState, ReactNode } from 'react';
+import { createContext, useContext, useState, ReactNode, useCallback } from 'react';
 
 export interface ContentField {
   id: string;
@@ -110,7 +110,7 @@ const initialContent: ContentPage[] = [
 export function ContentProvider({ children }: { children: ReactNode }) {
   const [content, setContent] = useState<ContentPage[]>(initialContent);
 
-  const updateField = (pageId: string, fieldId: string, value: string) => {
+  const updateField = useCallback((pageId: string, fieldId: string, value: string) => {
     setContent(prev => 
       prev.map(page => 
         page.id === pageId 
@@ -125,9 +125,9 @@ export function ContentProvider({ children }: { children: ReactNode }) {
           : page
       )
     );
-  };
+  }, []);
 
-  const savePage = async (pageId: string) => {
+  const savePage = useCallback(async (pageId: string) => {
     // Mock save functionality
     console.log(`Saving page: ${pageId}`);
     return new Promise<void>((resolve) => {
@@ -136,9 +136,9 @@ export function ContentProvider({ children }: { children: ReactNode }) {
         resolve();
       }, 1000);
     });
-  };
+  }, []);
 
-  const uploadFieldFile = async (pageId: string, fieldId: string, file: File): Promise<string> => {
+  const uploadFieldFile = useCallback(async (pageId: string, fieldId: string, file: File): Promise<string> => {
     // Mock file upload functionality
     console.log(`Uploading file for page: ${pageId}, field: ${fieldId}`);
     return new Promise<string>((resolve) => {
@@ -148,9 +148,9 @@ export function ContentProvider({ children }: { children: ReactNode }) {
         resolve(mockUrl);
       }, 1000);
     });
-  };
+  }, []);
 
-  const loadPage = async (pageId: string) => {
+  const loadPage = useCallback(async (pageId: string) => {
     // Mock load functionality
     console.log(`Loading page: ${pageId}`);
     return new Promise<void>((resolve) => {
@@ -159,7 +159,7 @@ export function ContentProvider({ children }: { children: ReactNode }) {
         resolve();
       }, 500);
     });
-  };
+  }, []);
 
   return (
     <ContentContext.Provider value={{

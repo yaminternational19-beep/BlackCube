@@ -30,7 +30,7 @@ export default function AdminLayout({ active }: { children?: ReactNode; active?:
           
           {/* Scrollable Main Content */}
           <main className="flex-1 p-6 overflow-auto mt-16">
-            <AdminContent activeTab={activeTab} />
+            <AdminContent key={activeTab} activeTab={activeTab} />
           </main>
         </div>
       </div>

@@ -31,15 +31,8 @@ export function AdminContent({ activeTab }: AdminContentProps) {
   const { content, updateField, savePage, uploadFieldFile, loadPage } = useContent();
   const { toast } = useToast();
 
-  useEffect(() => {
-    (async () => {
-      try {
-        for (const p of content) {
-          await loadPage(p.id);
-        }
-      } catch { }
-    })();
-  }, [content, loadPage]);
+  // Content is already loaded via initialContent or can be loaded on-demand
+  // Removing the loop that was causing re-render freezes
 
   const handleFieldUpdate = (pageId: string, fieldId: string, value: string) => {
     updateField(pageId, fieldId, value);

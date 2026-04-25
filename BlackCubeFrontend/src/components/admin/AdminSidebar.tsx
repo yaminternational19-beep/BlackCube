@@ -122,26 +122,30 @@ export function AdminSidebar({ activeTab, onTabChange }: AdminSidebarProps) {
               {sidebarItems.map((item) => (
                 <SidebarMenuItem key={item.id}>
                   <SidebarMenuButton
-                    onClick={() => onTabChange(item.id)}
+                    asChild
                     className={cn(
-                      "w-full justify-start px-3 py-2 rounded-lg transition-colors",
+                      "w-full justify-start px-3 py-2 rounded-lg transition-colors cursor-pointer",
                       "hover:bg-sidebar-accent hover:text-sidebar-accent-foreground",
                       activeTab === item.id && "bg-sidebar-accent text-sidebar-accent-foreground font-medium"
                     )}
                   >
-                    <item.icon className={cn(
-                      "h-4 w-4 flex-shrink-0",
-                      activeTab === item.id ? "text-primary" : "text-sidebar-foreground/60"
-                    )} />
-                    {!isCollapsed && (
-                      <div className="flex-1 text-left ml-3">
-                        <div className="text-sm font-medium">{item.title}</div>
-                        {/* <div className="text-xs text-sidebar-foreground/60">{item.description}</div> */}
-                      </div>
-                    )}
-                    {!isCollapsed && activeTab === item.id && (
-                      <ChevronRight className="h-4 w-4 text-primary" />
-                    )}
+                    <button onClick={() => {
+                      console.log('Changing tab to:', item.id);
+                      onTabChange(item.id);
+                    }}>
+                      <item.icon className={cn(
+                        "h-4 w-4 flex-shrink-0",
+                        activeTab === item.id ? "text-primary" : "text-sidebar-foreground/60"
+                      )} />
+                      {!isCollapsed && (
+                        <div className="flex-1 text-left ml-3">
+                          <div className="text-sm font-medium">{item.title}</div>
+                        </div>
+                      )}
+                      {!isCollapsed && activeTab === item.id && (
+                        <ChevronRight className="h-4 w-4 text-primary" />
+                      )}
+                    </button>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}

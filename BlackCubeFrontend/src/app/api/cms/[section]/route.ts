@@ -6,7 +6,7 @@ function checkAuth(req: NextRequest): boolean {
   const token = process.env.CMS_TOKEN;
   if (!token) return true; // if not set, allow local edits
   if (!header) return false;
-  const input = header.replace(/^Bearer\s+/i, '');
+  const input = header?.replace(/^Bearer\s+/i, '') ?? '';
   return input === token;
 }
 

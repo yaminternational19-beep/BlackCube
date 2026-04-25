@@ -103,23 +103,12 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="theme-color" content="#ffffff" />
-          <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={baseUrl} />
-        <link rel="sitemap" type="application/xml" href={`${baseUrl}/sitemap.xml`} />
+      <body className="antialiased">
         {/* Organization JSON-LD Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
-        {/* Preconnect to external resources for performance */}
-        <link rel="preconnect" href={baseUrl} />
-        <link rel="dns-prefetch" href={baseUrl} />
-      </head>
-      <body className="antialiased">
         {children}
       </body>
     </html>

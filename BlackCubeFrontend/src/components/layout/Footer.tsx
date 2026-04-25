@@ -1,14 +1,17 @@
 'use client';
 
-import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram } from 'lucide-react';
 import { companyInfo } from '@/data';
 
-const goTo = (path: string, hash?: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
-  e.preventDefault();
-  const targetPath = path || '/';
-  const targetHash = hash ? `#${hash}` : '';
-  if (typeof window !== 'undefined') {
+const Footer = () => {
+  const router = useRouter();
+  
+  const goTo = (path: string, hash?: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const targetPath = path || '/';
+    const targetHash = hash ? `#${hash}` : '';
+    
     if (window.location.pathname === targetPath && hash) {
       const el = document.getElementById(hash);
       if (el) {
@@ -16,11 +19,8 @@ const goTo = (path: string, hash?: string) => (e: React.MouseEvent<HTMLAnchorEle
         return;
       }
     }
-    window.location.href = `${targetPath}${targetHash}`;
-  }
-};
-
-const Footer = () => {
+    router.push(`${targetPath}${targetHash}`);
+  };
   const currentYear = new Date().getFullYear();
   return (
     <footer className="bg-black text-white py-16 relative overflow-hidden">
