@@ -424,7 +424,7 @@ const PortfolioPage = () => {
                             <div className="flex items-center gap-3">
                               {(p.technologies || []).map((t: string, idx: number) => (
                                 <div key={idx} className="w-9 h-9 rounded-lg bg-[#0b0b0b] ring-1 ring-white/5 flex items-center justify-center text-gray-300 text-xs">
-                                  {t[0]}
+                                  {t ? t[0] : ''}
                                 </div>
                               ))}
                             </div>
