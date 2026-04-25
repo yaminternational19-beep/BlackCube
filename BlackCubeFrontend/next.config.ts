@@ -5,7 +5,6 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
 
-  output: "standalone",
 
   async headers() {
     return [
