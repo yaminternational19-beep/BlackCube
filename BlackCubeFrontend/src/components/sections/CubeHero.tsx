@@ -94,7 +94,7 @@ export default function CubeHero({ title, highlightText, subtitle, primaryCta, s
                 <Button
                   size="lg"
                   className="group bg-gradient-to-r from-primary-blue to-primary-purple hover:from-primary-purple hover:to-primary-blue"
-                  onClick={() => router.push(primaryCta.href)}
+                  href={primaryCta.href}
                 >
                   {primaryCta.label}
                   <ArrowRight className="w-5 h-5" />
@@ -105,7 +105,7 @@ export default function CubeHero({ title, highlightText, subtitle, primaryCta, s
                   variant="outline"
                   size="lg"
                   className="border-primary-blue/30 text-primary-blue hover:bg-primary-blue/10"
-                  onClick={() => router.push(secondaryCta.href)}
+                  href={secondaryCta.href}
                 >
                   {secondaryCta.label}
                 </Button>

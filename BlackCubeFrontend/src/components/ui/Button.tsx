@@ -1,13 +1,15 @@
 'use client';
 
-import { ReactNode, ButtonHTMLAttributes } from 'react';
+import { ReactNode, ButtonHTMLAttributes, AnchorHTMLAttributes } from 'react';
 import { cn } from '@/lib/utils';
+import Link from 'next/link';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
   isLoading?: boolean;
+  href?: string;
 }
 
 const Button = ({ 
@@ -17,6 +19,7 @@ const Button = ({
   isLoading = false,
   className,
   disabled,
+  href,
   ...props 
 }: ButtonProps) => {
   const baseClasses = 'inline-flex items-center justify-center font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed btn-glow';
@@ -34,25 +37,37 @@ const Button = ({
     lg: 'px-8 py-4 text-base rounded-xl',
   };
 
+  const commonClasses = cn(
+    baseClasses,
+    variants[variant],
+    sizes[size],
+    className
+  );
+
+  const content = isLoading ? (
+    <div className="flex items-center space-x-2">
+      <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" />
+      <span>Loading...</span>
+    </div>
+  ) : (
+    children
+  );
+
+  if (href) {
+    return (
+      <Link href={href} className={commonClasses} {...(props as any)}>
+        {content}
+      </Link>
+    );
+  }
+
   return (
     <button
-      className={cn(
-        baseClasses,
-        variants[variant],
-        sizes[size],
-        className
-      )}
+      className={commonClasses}
       disabled={disabled || isLoading}
       {...props}
     >
-      {isLoading ? (
-        <div className="flex items-center space-x-2">
-          <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" />
-          <span>Loading...</span>
-        </div>
-      ) : (
-        children
-      )}
+      {content}
     </button>
   );
 };

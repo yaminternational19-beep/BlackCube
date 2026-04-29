@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { useInView } from 'react-intersection-observer';
 import {
   Globe,
@@ -153,6 +154,10 @@ const ServicesPage = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>BlackCube Services - AI, Automation, and Custom Software</title>
+        <meta name="description" content="Explore BlackCube's expert services in AI, custom software development, mobile apps, and automation solutions." />
+      </Helmet>
       <div className="min-h-screen bg-black text-white">
 
         {/* Hero Section */}
@@ -401,7 +406,7 @@ const ServicesPage = () => {
                               {tab.thumbnails.slice(0, 2).map((thumb: string, idx: number) => (
                                 <div key={idx} className="bg-[#0a0a0a] rounded-xl overflow-hidden h-64 flex items-center justify-center">
                                   {thumb ? (
-                                    <img src={getAssetUrl(thumb)} alt={`Thumb ${idx + 1}`} className="w-full h-full object-cover" />
+                                    <img src={getAssetUrl(thumb)} alt={`Thumb ${idx + 1}`} className="w-full h-full object-cover" loading="lazy" />
                                   ) : (
                                     <div className="text-gray-500 text-sm">Project Thumbnail {idx + 1}</div>
                                   )}
@@ -487,9 +492,8 @@ const ServicesPage = () => {
                 >
                   <Card hover className="bg-[#111] rounded-2xl p-8 h-full border-0">
                     <div className="flex items-start gap-4">
-                      <img src={getAssetUrl(t.avatar)} alt={t.name} className="w-14 h-14 rounded-full object-cover group-hover:scale-110 transition-transform" />
+                      <img src={getAssetUrl(t.avatar)} alt={t.name} className="w-14 h-14 rounded-full object-cover group-hover:scale-110 transition-transform" loading="lazy" />
                       <div>
-                        <div className="text-white font-semibold mb-1">{t.name}</div>
                         <div className="text-sm text-gray-400 mb-3">{t.role}</div>
                         <p className="text-gray-400 text-sm leading-relaxed">"{t.text}"</p>
                       </div>

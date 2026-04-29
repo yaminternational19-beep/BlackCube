@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { useInView } from 'react-intersection-observer';
 import {
   Zap,
@@ -139,6 +140,10 @@ const PortfolioPage = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>BlackCube Portfolio - Innovative Software Projects and AI Solutions</title>
+        <meta name="description" content="View BlackCube's portfolio of successful projects, including AI solutions, web development, and mobile applications." />
+      </Helmet>
       <div className="min-h-screen bg-black text-white">
 
         {/* Hero Section */}
@@ -299,6 +304,7 @@ const PortfolioPage = () => {
                           src={getAssetUrl(item.image) || '/placeholder.svg'}
                           alt={item.title}
                           className="w-full h-full object-cover rounded-2xl transition-transform group-hover:scale-105"
+                          loading="lazy"
                         />
                         <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors" />
                         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
@@ -371,6 +377,7 @@ const PortfolioPage = () => {
                           src={getAssetUrl(p.image) || '/freepik__it-company-project-banner-global-network-visualiza__30555.png'}
                           alt={p.title}
                           className="w-full h-[340px] object-cover"
+                          loading="lazy"
                         />
                         <button
                           onClick={() => setExpandedId(expandedId === p.id ? null : p.id)}

@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import HelmetProvider from "@/components/providers/HelmetProvider";
 
 const baseUrl = "https://blackcube.ae";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  title: "Black Cube Solutions LLC | Digital Transformation Company in UAE",
-  description:
-    "Black Cube Solutions LLC is a digital transformation company in the UAE delivering web & mobile development, cloud migration, UX/UI, digital strategy, and enterprise software solutions.",
+  title: "BlackCube - AI & Software Company",
+  description: "BlackCube provides AI, automation, and software solutions.",
   keywords: [
     "digital transformation",
     "digital transformation UAE",
@@ -28,10 +28,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: baseUrl,
   },
+  manifest: "/manifest.json",
   openGraph: {
-    title: "Black Cube Solutions LLC | Digital Transformation Company in UAE",
-    description:
-      "Black Cube Solutions LLC is a digital transformation company in the UAE delivering web & mobile development, cloud migration, UX/UI, digital strategy, and enterprise software solutions.",
+    title: "BlackCube - AI & Software Company",
+    description: "BlackCube provides AI, automation, and software solutions.",
     url: baseUrl,
     type: "website",
     locale: "en_US",
@@ -47,9 +47,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Black Cube Solutions LLC | Digital Transformation Company in UAE",
-    description:
-      "Black Cube Solutions LLC is a digital transformation company in the UAE delivering web & mobile development, cloud migration, UX/UI, digital strategy, and enterprise software solutions.",
+    title: "BlackCube - AI & Software Company",
+    description: "BlackCube provides AI, automation, and software solutions.",
     creator: "@blackcubesolutions",
     site: "@blackcubesolutions",
   },
@@ -109,7 +108,9 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
-        {children}
+        <HelmetProvider>
+          {children}
+        </HelmetProvider>
       </body>
     </html>
   );

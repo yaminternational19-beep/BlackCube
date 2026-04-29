@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { Card } from "@/components/ui/Card";
 import {
   ArrowRight,
@@ -23,6 +24,7 @@ import {
 } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { pageApi, getAssetUrl } from "@/lib/api";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 const HomePage = () => {
@@ -326,6 +328,10 @@ const HomePage = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>BlackCube - AI & Software Company</title>
+        <meta name="description" content="BlackCube provides AI, automation, and software solutions." />
+      </Helmet>
       <div className="min-h-screen bg-black text-white overflow-x-hidden">
         <section className="relative min-h-screen flex items-center justify-center pt-20 md:pt-28 pb-10 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black" />
@@ -367,9 +373,9 @@ const HomePage = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.5 }}
                 >
-                  <button onClick={() => router.push('/contact')} className="px-6 sm:px-8 py-3 sm:py-4 bg-white text-black font-semibold rounded hover:bg-gray-200 transition-colors">
+                  <Link href='/contact' className="px-6 sm:px-8 py-3 sm:py-4 bg-white text-black font-semibold rounded hover:bg-gray-200 transition-colors">
                     {heroSlides[0].cta}
-                  </button>
+                  </Link>
                   <button className="px-6 sm:px-8 py-3 sm:py-4 border border-gray-700 text-white font-semibold rounded hover:bg-gray-900 transition-colors">
                     {heroSlides[0].cta2}
                   </button>
@@ -487,7 +493,7 @@ const HomePage = () => {
                   <div className="relative z-10 flex flex-col items-center">
                     <div className="bg-neutral-800/80 backdrop-blur-sm p-4 rounded-full mb-6 flex items-center justify-center ring-1 ring-white/10 group-hover:bg-neutral-700 transition-all duration-300">
                       {(service as any).image ? (
-                        <img src={getAssetUrl((service as any).image)} alt={service.title} className="w-12 h-12 rounded-full object-cover" />
+                        <img src={getAssetUrl((service as any).image)} alt={service.title} className="w-12 h-12 rounded-full object-cover" loading="lazy" />
                       ) : (
                         <service.icon className="w-6 h-6 text-white opacity-90" />
                       )}
@@ -496,9 +502,9 @@ const HomePage = () => {
                       {service.title}
                     </h3>
                     <p className="text-sm text-gray-400 mb-6">{service.desc}</p>
-                    <button onClick={() => router.push('/services')} className="inline-flex items-center gap-2 text-sm font-medium text-gray-300 hover:text-white transition-all ring-1 ring-white/10 rounded-full px-4 py-2 hover:bg-neutral-800">
+                    <Link href='/services' className="inline-flex items-center gap-2 text-sm font-medium text-gray-300 hover:text-white transition-all ring-1 ring-white/10 rounded-full px-4 py-2 hover:bg-neutral-800">
                       Learn More →
-                    </button>
+                    </Link>
                   </div>
                 </Card>
               ))}
@@ -546,7 +552,7 @@ const HomePage = () => {
                     {/* Top Card Section */}
                     <div className="relative h-56 bg-gradient-to-b from-[#0f172a] to-black flex items-center justify-center rounded-t-2xl">
                       {(work as any).image && (
-                        <img src={getAssetUrl((work as any).image)} alt={work.title} className="absolute inset-0 w-full h-full object-cover opacity-70" />
+                        <img src={getAssetUrl((work as any).image)} alt={work.title} className="absolute inset-0 w-full h-full object-cover opacity-70" loading="lazy" />
                       )}
                       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.03)_0%,transparent_70%)]" />
 
@@ -556,9 +562,9 @@ const HomePage = () => {
                       </div>
 
                       {/* Button */}
-                      <button onClick={() => router.push('/portfolio')} className="absolute bottom-5 px-5 py-2 rounded-full bg-[#101010] ring-1 ring-white/10 text-gray-300 text-sm backdrop-blur-sm hover:bg-[#161616] transition-all duration-300">
+                      <Link href='/portfolio' className="absolute bottom-5 px-5 py-2 rounded-full bg-[#101010] ring-1 ring-white/10 text-gray-300 text-sm backdrop-blur-sm hover:bg-[#161616] transition-all duration-300">
                         View Projects Details →
-                      </button>
+                      </Link>
                     </div>
 
                     {/* Bottom Info Section */}
@@ -631,6 +637,7 @@ const HomePage = () => {
                       src={getAssetUrl(t.avatar)}
                       alt={t.name}
                       className="w-9 h-9 rounded-full mr-3"
+                      loading="lazy"
                     />
                     <div>
                       <h4 className="font-semibold text-white text-[14px]">
@@ -670,6 +677,7 @@ const HomePage = () => {
                       src={getAssetUrl(t.avatar)}
                       alt={t.name}
                       className="w-9 h-9 rounded-full mr-3"
+                      loading="lazy"
                     />
                     <div>
                       <h4 className="font-semibold text-white text-[14px]">
@@ -848,12 +856,12 @@ const HomePage = () => {
                 {finalCta.description}
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
-                <button onClick={() => router.push('/contact')} className="px-8 py-4 bg-white text-black font-bold rounded-lg hover:bg-gray-200 transition-colors">
+                <Link href='/contact' className="px-8 py-4 bg-white text-black font-bold rounded-lg hover:bg-gray-200 transition-colors">
                   {finalCta.primaryButton}
-                </button>
-                <button onClick={() => router.push('/services')} className="px-8 py-4 border border-gray-700 text-white font-bold rounded-lg hover:bg-gray-900 transition-colors">
+                </Link>
+                <Link href='/services' className="px-8 py-4 border border-gray-700 text-white font-bold rounded-lg hover:bg-gray-900 transition-colors">
                   {finalCta.secondaryButton}
-                </button>
+                </Link>
               </div>
             </motion.div>
           </div>

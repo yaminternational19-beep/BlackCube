@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import {
@@ -107,6 +108,10 @@ const AboutPage = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>About BlackCube - Leading AI & Software Solutions Provider</title>
+        <meta name="description" content="Learn about BlackCube, our mission, vision, and the team behind our innovative AI and software solutions." />
+      </Helmet>
       <div className="min-h-screen bg-black text-white overflow-x-hidden">
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center pt-24 md:pt-28 pb-10 overflow-hidden">
@@ -482,6 +487,7 @@ const AboutPage = () => {
                         src={getAssetUrl(member.image)}
                         alt={member.name}
                         className="w-16 h-16 sm:w-20 sm:h-20 md:w-20 md:h-20 rounded-full mx-auto object-cover"
+                        loading="lazy"
                       />
                     </div>
 
