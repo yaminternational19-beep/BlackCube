@@ -68,7 +68,7 @@ export interface AboutPageData {
 
 export const defaultAboutPageData: AboutPageData = {
   heroContent: {
-    title: 'About Black Cube Solutions',
+    title: 'About BlackCube Solutions LLC',
     subtitle: 'We are a leading IT solutions provider in Dubai, empowering businesses through innovative technology and digital transformation.',
     primaryCta: "Let's Talk",
     secondaryCta: 'View Services'
@@ -144,7 +144,7 @@ export const defaultAboutPageData: AboutPageData = {
     subtitle: 'Our talented team of professionals is dedicated to delivering exceptional results for our clients.'
   },
   whyChooseUsSection: {
-    title: 'Why Choose Black Cube Solutions?',
+    title: 'Why Choose BlackCube Solutions LLC?',
     subtitle: 'We combine technical expertise with business acumen to deliver solutions that drive real results.',
     stats: {
       satisfactionRate: '98%',

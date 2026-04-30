@@ -46,11 +46,11 @@ export function ServicesPageCMS() {
 
     categoriesTitlePrefix: 'Categories of',
     categoriesTitleHighlight: 'Services',
-    categoriesDescription: 'At Black Cube, we are committed to delivering exceptional digital solutions that drive your business forward. Our comprehensive range of services includes web design, app development, web development, and marketing solutions tailored to meet your unique needs.',
+    categoriesDescription: 'At BlackCube Solutions LLC, we are committed to delivering exceptional digital solutions that drive your business forward. Our comprehensive range of services includes web design, app development, web development, and marketing solutions tailored to meet your unique needs.',
 
     testimonialsTitlePrefix: 'What Our',
     testimonialsTitleHighlight: 'Clients Say',
-    testimonialsDescription: 'Hear what our clients say about working with Black Cube.',
+    testimonialsDescription: 'Hear what our clients say about working with BlackCube Solutions LLC.',
 
     industriesTitlePrefix: 'Industries',
     industriesTitleHighlight: 'We Serve',

@@ -24,7 +24,7 @@ const VARIANT_STYLE: Record<CubeHeroVariant, {
   duration: number;
   kicker: string;
 }> = {
-  about: { faceText: "Black Cube", sizePx: 220, duration: 20, kicker: "ABOUT US" },
+  about: { faceText: "BlackCube", sizePx: 220, duration: 20, kicker: "ABOUT US" },
   services: { faceText: "Services", sizePx: 220, duration: 22, kicker: "OUR SERVICES" },
   portfolio: { faceText: "Portfolio", sizePx: 230, duration: 24, kicker: "PORTFOLIO" },
   career: { faceText: "Careers", sizePx: 220, duration: 21, kicker: "CAREERS" },

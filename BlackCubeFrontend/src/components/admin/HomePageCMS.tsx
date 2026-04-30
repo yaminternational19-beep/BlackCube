@@ -71,7 +71,7 @@ export function HomePageCMS() {
     [
       {
         id: 1,
-        text: "Working with Black Cube transformed our business. Their attention to detail and commitment to excellence is unmatched.",
+        text: "Working with BlackCube Solutions LLC transformed our business. Their attention to detail and commitment to excellence is unmatched.",
         name: "Sarah Johnson",
         role: "CEO, TechStart Inc",
         avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
@@ -96,7 +96,7 @@ export function HomePageCMS() {
   // FAQs
   const [faqs, setFaqs] = useState(
     [
-      { id: 1, q: "What services does Black Cube offer?", a: "We offer comprehensive digital solutions including web development, mobile app development, UI/UX design, and digital marketing services." },
+      { id: 1, q: "What services does BlackCube Solutions LLC offer?", a: "We offer comprehensive digital solutions including web development, mobile app development, UI/UX design, and digital marketing services." },
       { id: 2, q: "How long does it take to complete a web development project?", a: "Project timelines vary based on complexity, but typically range from 4-12 weeks for most web projects." },
       { id: 3, q: "What is your approach to UI/UX design?", a: "We follow a user-centered design approach, focusing on research, prototyping, testing, and iteration." },
       { id: 4, q: "Do you provide ongoing support after project completion?", a: "Yes, we offer maintenance and support packages to ensure your solution continues to perform optimally." },
@@ -108,12 +108,12 @@ export function HomePageCMS() {
   // Clients
   const [clients, setClients] = useState(
     [
-      { id: 1, name: "ABC Tech Solutions", description: "A leading technology firm that trusted DigitX to develop their responsive website, showcasing their cutting-edge products and services." },
-      { id: 2, name: "GreenEarth Eco Store", description: "DigitX collaborated with GreenEarth Eco Store to create an engaging e-commerce platform promoting sustainable living and eco-friendly products." },
-      { id: 3, name: "HealthTech Innovations", description: "DigitX developed a user-centric mobile app for HealthTech Innovations, helping them revolutionize health tracking." },
-      { id: 4, name: "GlobalTech Solutions", description: "GlobalTech Solutions partnered with DigitX for a website redesign, resulting in a modern interface that elevates their online presence." },
-      { id: 5, name: "TechGuru Inc.", description: "DigitX's digital marketing strategies boosted TechGuru Inc.'s online visibility and engagement, driving business growth." },
-      { id: 6, name: "ArtScape Gallery", description: "DigitX brought ArtScape Gallery's artistic vision to life with a visually stunning website showcasing talented artists." },
+      { id: 1, name: "ABC Tech Solutions", description: "A leading technology firm that trusted BlackCube Solutions LLC to develop their responsive website, showcasing their cutting-edge products and services." },
+      { id: 2, name: "GreenEarth Eco Store", description: "BlackCube Solutions LLC collaborated with GreenEarth Eco Store to create an engaging e-commerce platform promoting sustainable living and eco-friendly products." },
+      { id: 3, name: "HealthTech Innovations", description: "BlackCube Solutions LLC developed a user-centric mobile app for HealthTech Innovations, helping them revolutionize health tracking." },
+      { id: 4, name: "GlobalTech Solutions", description: "GlobalTech Solutions partnered with BlackCube Solutions LLC for a website redesign, resulting in a modern interface that elevates their online presence." },
+      { id: 5, name: "TechGuru Inc.", description: "BlackCube Solutions LLC's digital marketing strategies boosted TechGuru Inc.'s online visibility and engagement, driving business growth." },
+      { id: 6, name: "ArtScape Gallery", description: "BlackCube Solutions LLC brought ArtScape Gallery's artistic vision to life with a visually stunning website showcasing talented artists." },
     ]
   );
 
@@ -124,9 +124,9 @@ export function HomePageCMS() {
     servicesDescription: "Our comprehensive range of services includes web design, mobile app development, SEO, and more. Whether you’re a startup or an established enterprise, our experts craft solutions that drive results.",
 
     reasonsTitlePrefix: "Reasons to Choose",
-    reasonsTitleHighlight: "Black Cube for",
+    reasonsTitleHighlight: "BlackCube for",
     reasonsTitleLine2: "Your Digital Journey",
-    reasonsDescription: "Partnering with Black Cube offers a multitude of advantages — increased visibility, engagement, and ROI. Our solutions are tailored to meet your unique business needs for lasting success.",
+    reasonsDescription: "Partnering with BlackCube Solutions LLC offers a multitude of advantages — increased visibility, engagement, and ROI. Our solutions are tailored to meet your unique business needs for lasting success.",
 
     worksTitlePrefix: "Our",
     worksTitleHighlight: "Works",
@@ -134,7 +134,7 @@ export function HomePageCMS() {
 
     testimonialsTitlePrefix: "Our",
     testimonialsTitleHighlight: "Testimonials",
-    testimonialsDescription: "Hear what our clients say about working with Black Cube.",
+    testimonialsDescription: "Hear what our clients say about working with BlackCube Solutions LLC.",
 
     faqsTitlePrefix: "Frequently",
     faqsTitleHighlight: "Asked Questions",
@@ -696,7 +696,7 @@ export function HomePageCMS() {
               <div className="mb-6"><h4 className="text-white font-semibold">Reasons</h4></div>
               <div className="space-y-4">
                 <AdminInput value={headings.reasonsTitlePrefix} onChange={(e) => updateHeading("reasonsTitlePrefix", e.target.value)} placeholder="Title prefix (e.g., Reasons to Choose)" />
-                <AdminInput value={headings.reasonsTitleHighlight} onChange={(e) => updateHeading("reasonsTitleHighlight", e.target.value)} placeholder="Title highlight (e.g., Black Cube for)" />
+                <AdminInput value={headings.reasonsTitleHighlight} onChange={(e) => updateHeading("reasonsTitleHighlight", e.target.value)} placeholder="Title highlight (e.g., BlackCube for)" />
                 <AdminInput value={headings.reasonsTitleLine2} onChange={(e) => updateHeading("reasonsTitleLine2", e.target.value)} placeholder="Second line (e.g., Your Digital Journey)" />
                 <AdminTextarea rows={3} value={headings.reasonsDescription} onChange={(e) => updateHeading("reasonsDescription", e.target.value)} placeholder="Section description" />
               </div>

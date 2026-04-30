@@ -41,9 +41,9 @@ export function ContactPageCMS() {
   // Email contacts section
   const [emailSectionTitle, setEmailSectionTitle] = useState('Contact Us Via Email');
   const [emailContacts, setEmailContacts] = useState<Array<{ label: string; value: string }>>([
-    { label: 'For General Inquiries', value: 'info@digitx.com' },
-    { label: 'For Business Collaborations', value: 'partnerships@digitx.com' },
-    { label: 'For Job Opportunities', value: 'careers@digitx.com' },
+    { label: 'For General Inquiries', value: 'info@blackcube.ae' },
+    { label: 'For Business Collaborations', value: 'partnerships@blackcube.ae' },
+    { label: 'For Job Opportunities', value: 'careers@blackcube.ae' },
   ]);
 
   // Phone contacts section

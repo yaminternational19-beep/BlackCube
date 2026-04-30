@@ -53,7 +53,7 @@ export function CareerPageCMS() {
   // How to Apply (section heading + 6 steps)
   const [howToApplySection, setHowToApplySection] = useState({
     title: 'How to Apply',
-    subtitle: 'We are excited to meet you. If you are interested in joining our team at DigiTX and apply for our current job listings, please follow the simple steps below.'
+    subtitle: 'We are excited to meet you. If you are interested in joining our team at BlackCube Solutions LLC and apply for our current job listings, please follow the simple steps below.'
   });
   const [howToApplySteps, setHowToApplySteps] = useState([
     { step: 'Step 01', title: 'Explore Job Listings', desc: 'Visit our website’s Careers page to explore the current job openings. Review the descriptions to evaluate your suitability and select the position that aligns with your skills, experience, and career aspirations.' },

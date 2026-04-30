@@ -27,7 +27,7 @@ const AdminTextarea = ({ className = "", ...props }: React.TextareaHTMLAttribute
 
 export function AboutPageCMS() {
   const [heroContent, setHeroContent] = useState({
-    title: 'About Black Cube Solutions',
+    title: 'About BlackCube Solutions LLC',
     subtitle: 'We are a leading IT solutions provider in Dubai, empowering businesses through innovative technology and digital transformation.',
     primaryCta: "Let's Talk",
     secondaryCta: 'View Services'
@@ -111,7 +111,7 @@ export function AboutPageCMS() {
   });
 
   const [whyChooseUsSection, setWhyChooseUsSection] = useState({
-    title: 'Why Choose Black Cube Solutions?',
+    title: 'Why Choose BlackCube Solutions LLC?',
     subtitle: 'We combine technical expertise with business acumen to deliver solutions that drive real results.',
     stats: {
       satisfactionRate: '98%',

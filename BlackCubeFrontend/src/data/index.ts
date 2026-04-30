@@ -169,7 +169,7 @@ export const testimonials: Testimonial[] = [
     name: 'John Smith',
     company: 'TechCorp Solutions',
     position: 'CEO',
-    content: 'Black Cube Solutions transformed our digital presence completely. Their expertise and dedication are unmatched.',
+    content: 'BlackCube Solutions LLC transformed our digital presence completely. Their expertise and dedication are unmatched.',
     image: '/images/testimonials/john.jpg',
     rating: 5
   },
@@ -266,7 +266,7 @@ export const jobPostings: JobPosting[] = [
 ];
 
 export const companyInfo: CompanyInfo = {
-  name: 'Black Cube Solutions LLC',
+  name: 'BlackCube Solutions LLC',
   address: 'Business Bay, Dubai, UAE',
   phone: '+971 4 123 4567',
   email: 'info@blackcube.ae',

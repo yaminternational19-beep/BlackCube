@@ -37,7 +37,7 @@ export const defaultPortfolioPageData = {
   projectMetaSection: {
     published: 'April 20, 2024',
     category: 'Design / Ideas',
-    client: 'Black Cube Solutions'
+    client: 'BlackCube Solutions LLC'
   },
 
   caseStudiesSection: {

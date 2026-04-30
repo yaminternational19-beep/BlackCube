@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import HelmetProvider from "@/components/providers/HelmetProvider";
+
 
 const baseUrl = "https://blackcube.ae";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  title: "BlackCube - AI & Software Company",
+  title: "BlackCube Solutions LLC - AI & Software Company",
   description: "BlackCube provides AI, automation, and software solutions.",
   keywords: [
     "digital transformation",
@@ -22,32 +22,29 @@ export const metadata: Metadata = {
     "IT consulting",
     "enterprise software",
   ],
-  authors: [{ name: "Black Cube Solutions LLC", url: baseUrl }],
-  creator: "Black Cube Solutions LLC",
-  publisher: "Black Cube Solutions LLC",
-  alternates: {
-    canonical: baseUrl,
-  },
+  authors: [{ name: "BlackCube Solutions LLC", url: baseUrl }],
+  creator: "BlackCube Solutions LLC",
+  publisher: "BlackCube Solutions LLC",
   manifest: "/manifest.json",
   openGraph: {
-    title: "BlackCube - AI & Software Company",
+    title: "BlackCube Solutions LLC - AI & Software Company",
     description: "BlackCube provides AI, automation, and software solutions.",
     url: baseUrl,
     type: "website",
     locale: "en_US",
-    siteName: "Black Cube Solutions",
+    siteName: "BlackCube Solutions LLC",
     images: [
       {
         url: `${baseUrl}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: "Black Cube Solutions LLC",
+        alt: "BlackCube Solutions LLC",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "BlackCube - AI & Software Company",
+    title: "BlackCube Solutions LLC - AI & Software Company",
     description: "BlackCube provides AI, automation, and software solutions.",
     creator: "@blackcubesolutions",
     site: "@blackcubesolutions",
@@ -63,7 +60,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "google-site-verification-code",
+    google: "YOUR_ACTUAL_GOOGLE_VERIFICATION_CODE", // Replace with actual code from Google Search Console
   },
   category: "Technology",
 };
@@ -76,10 +73,10 @@ export default function RootLayout({
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Black Cube Solutions LLC",
+    "name": "BlackCube Solutions LLC",
     "url": baseUrl,
     "logo": `${baseUrl}/logo.png`,
-    "description": "Leading IT solutions provider in Dubai, UAE offering web development, mobile apps, UI/UX design, digital marketing, and cloud solutions.",
+    "description": "Leading IT solutions provider in Dubai, UAE offering web development, mobile apps, UI/UX design, digital marketing, and cloud solutions by BlackCube Solutions LLC.",
     "sameAs": [
       "https://www.facebook.com/blackcubesolutions",
       "https://www.linkedin.com/company/blackcubesolutions",
@@ -108,9 +105,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
-        <HelmetProvider>
-          {children}
-        </HelmetProvider>
+        {children}
       </body>
     </html>
   );

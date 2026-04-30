@@ -34,7 +34,7 @@ const Footer = () => {
             <div className="flex flex-col md:flex-row items-center md:items-center justify-between gap-6 text-center md:text-left mb-16 pb-8 border-b border-gray-800">
               {/* Logo */}
               <div className="text-3xl md:text-4xl font-bold md:mb-0">
-                BlackCube
+                BlackCube Solutions LLC
               </div>
 
               {/* Social Media */}
@@ -196,7 +196,7 @@ const Footer = () => {
             {/* Bottom Section */}
             <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-2 md:gap-4 text-xs sm:text-sm text-gray-400">
               {/* Copyright (Left) */}
-              <p>@2023 BlackCube. All Rights Reserved</p>
+              <p>@2023 BlackCube Solutions LLC. All Rights Reserved</p>
 
               {/* Version (Middle) */}
               <p className="text-center">Version 1.0</p>
